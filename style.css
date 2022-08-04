@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(20deg, rgba(2,0,36,1) 6%, rgba(21,13,118,1) 44%, rgba(18,191,235,1) 91%); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(43, 43, 43);
+}
+
+.navbar .title{
+    font-size: 1.2rem;
+    color: whitesmoke;
+    margin: 1rem;
+    font-weight: bolder;
+}
+
+.nav-links ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links ul li{
+    list-style: none;
+    margin: 1.2rem;
+}
+
+.nav-links ul li a:hover{
+    color:rgb(22, 156, 245);
+}
+
+.nav-links ul li a{
+    padding: .5rem;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.nav-links ul li a.contact{
+    border: 2px solid rgb(158, 155, 155);
+    border-radius: 50px;
+    background-color: whitesmoke;
+    color: rgb(24, 24, 24);
+}
+
+.nav-links ul li a.contact:hover{
+    background-color: rgb(22, 156, 245);
+    border: 2px solid rgb(24,24,24);
+}
+
+.nav-links ul img{
+    height: 30px;
+    width: 30px;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media(max-width: 600px){
+    .toggle-button{
+        display: flex;
+    }
+
+    .navbar{
+        flex-direction: column;
+        
+    }
+    .nav-links{
+        background-color: rgb(41, 41, 41);
+        width: 100%;
+        display: none;
+    }
+
+    .nav-links ul{
+        margin-top: 1.2rem;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-links ul li{
+        margin: 1.2rem 0;
+    }
+    .nav-links ul img{
+        margin: 1.2rem 0;
+    }
+    
+    .nav-links.active{
+        display: flex;
+    }
+}
